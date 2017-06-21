@@ -1,0 +1,16 @@
+{
+  "extends": "vue",
+  "rules": {
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ]
+  },
+  "env": {
+    "jquery": true
+  }
+}
