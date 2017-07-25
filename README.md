@@ -1,4 +1,4 @@
-# evala-html
+# evala Java Script app with vue.js
 
 > A Vue.js project
 
