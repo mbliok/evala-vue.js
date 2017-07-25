@@ -1,0 +1,78 @@
+@import "variables.scss";
+@import "mixins.scss";
+.login{
+    .form-group{
+      margin: 0 4%;
+      width: 96%;
+      position: relative;
+        &:before{
+            content:'*'; 
+            color:$orange; 
+            position: absolute;
+            left: -14px;
+            top: 10px;
+            font-size: 18px;     
+        }
+    }
+}
+
+.switch-button-holder{
+   $switch-w: 58px; 
+   $switch-h: 30px;
+   input{
+       visibility: hidden;
+   }
+
+   label{
+       display: inline-block;
+       position: relative;
+       z-index: 1;
+       padding-left: $switch-w;
+       line-height: $switch-h;
+       height: $switch-h;
+       & span{
+           padding-left: 16px;
+       }
+       &:before{
+           width: $switch-w;
+           height: 24px;
+           border-radius: 24px;
+           background: $gray_3;
+           content: "";
+           position: absolute;
+           z-index: 2;
+           left: 0;
+           top:0;
+           bottom: 0;
+           margin: auto;
+           border: 1px solid $gray_2;
+       }
+
+       &:after{
+           content: "";
+           position: absolute;
+           z-index: 3;
+           width: 20px;
+           height: 20px;
+           top:0;
+           bottom: 0;
+           margin: auto;
+           border-radius: 20px;
+           background: $gray_2;
+           border: 1px solid $gray_1;
+           left: 12px;
+
+           @include customTransition(-8px, 0, 0.3s);
+       }
+   }
+
+   &.on{
+        label{
+            &:after{
+                @include customTransition(22px, 0, 0.3s);
+                background: $orange;
+            }
+
+        }
+   }
+}

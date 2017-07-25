@@ -1,0 +1,103 @@
+ @import "./../variables.scss";
+ @import "./../mixins.scss";
+
+.evala-single, .give-evala{
+    .bgr-white{
+        padding-top: 50px;
+
+        @include breakpoint(xs) {
+          padding-top: 20px;
+        }    
+    }
+}
+
+.user-card {
+    padding: 34px 0 50px 0;
+    position: relative;
+    z-index: 20;
+    background:$white;
+
+    @include breakpoint(xs) {
+        padding: 34px 0 15px 0;
+    }
+    h4{
+        font-weight: bold;
+        font-size: 22px;
+
+        @include breakpoint(xs) {
+          font-size: 16px;
+        }    
+    }
+
+    .img-holder{
+        position: relative;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+
+         @include breakpoint(xs) {
+            width: 80px;
+            height: 80px;
+         }
+    }
+
+    .card-avatar{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('./../assets/avatar.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+    }
+
+    
+    .user-data{
+        padding: 0 15px;
+    }
+
+}
+
+
+.evala-nav{
+    
+    a{
+        padding: 23px 36px;
+        font-size: 22px;
+        font-weight: normal;
+        text-align: center;
+        display: block;
+        color: $black;
+        border: 1px solid $gray_2;
+        border-left: none;
+        border-top: none;
+        background: $white;
+         @include breakpoint(xs) {
+             padding: 10px 10px;
+             font-size: 12px;
+        }
+        @include breakpoint(sm) {
+             padding: 16px 10px;
+             font-size: 14px;
+        }
+        @include breakpoint(lg) {
+             font-size: 22px;
+        }
+        
+        &.active{
+            background: $orange;
+        }
+
+        &:hover{
+            text-decoration: none;
+        }
+
+        &:first-child{
+            border-left: 1px solid $gray_2;
+        }
+    }
+}
